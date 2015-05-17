@@ -18,13 +18,18 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
     <Content Include="package.json" />
+    <Content Include="public\favicon.ico" />
     <Content Include="README.md" />
     <Compile Include="app.js" />
+    <Compile Include="controllers\clientes.js" />
     <Compile Include="controllers\home.js" />
     <Compile Include="controllers\usuarios.js" />
+    <Compile Include="models\cliente.js" />
     <Compile Include="models\usuarios.js" />
     <Compile Include="routes\home.js" />
+    <Compile Include="routes\clientes.js" />
     <Compile Include="routes\usuarios.js" />
+    <Content Include="views\clientes\index.jade" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
     <Content Include="views\principal.jade" />
@@ -55,6 +60,7 @@
     <Folder Include="routes" />
     <Folder Include="views" />
     <Folder Include="views\home" />
+    <Folder Include="views\clientes\" />
     <Folder Include="views\usuarios" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />

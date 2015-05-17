@@ -1,4 +1,4 @@
-var moment = require('moment');
+﻿var moment = require("moment");
 
 module.exports = function(app){
 
@@ -24,8 +24,8 @@ module.exports = function(app){
 				if(err){
 					console.log(err);
 				}
-				req.flash('info','Usuário cadastrado com sucesso!');
-				res.redirect('/usuarios');
+				req.flash("info","Usuário cadastrado com sucesso!");
+				res.redirect("/usuarios");
 			});
 		},
 
@@ -34,7 +34,7 @@ module.exports = function(app){
 				if(err){
 					console.log(err);
 				}else{
-						res.render('usuarios/edit', {value: data});
+						res.render("usuarios/edit", {value: data});
 				}
 			});
 		},
@@ -51,8 +51,8 @@ module.exports = function(app){
 							if(err){
 								console.log(err);
 							}else{
-								req.flash('info', 'Usuário atualizado com sucesso!');
-							  res.redirect('/usuarios');
+								req.flash("info", "Usuário atualizado com sucesso!");
+							  res.redirect("/usuarios");
 							}
 						});
 				}
@@ -64,7 +64,7 @@ module.exports = function(app){
 				if(err){
 					console.log(err);
 				}else{
-						res.render('usuarios/show', {value: data});
+						res.render("usuarios/show", {value: data});
 				}
 			});
 		},
@@ -74,8 +74,8 @@ module.exports = function(app){
 				if (err){
 					console.log(err);
 				}else{
-					req.flash('info', 'Usuário excluído com sucesso!');
-					res.redirect('/usuarios');
+					req.flash("info", "Usuário excluído com sucesso!");
+					res.redirect("/usuarios");
 				}
 			});
 		}

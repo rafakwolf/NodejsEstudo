@@ -1,0 +1,31 @@
+﻿extends ../layout
+
+block content
+        h1 Listagem de Clientes
+        hr 
+        br
+        a(href="/clientes/create" title="Novo Cliente", class="btn btn-success") Novo
+        br
+        br
+        table(class="table")
+            thead
+                tr
+                    th Nome
+                    th Sobrenome
+                    th Nascimento
+                    th Cadastro
+                    th Cidade
+            tbody
+                each valor, i in lista
+                    tr
+                        td #{valor.nome}
+                        td #{valor.sobrenome}
+                        td #{moment(valor.dataNascimento).format('DD/MM/YYYY')}                        
+                        td #{moment(valor.dataCadastro).format('DD/MM/YYYY')}
+                        td #{valor.cidade}
+                        td
+                          a(href="/clientes/edit/#{valor._id}", title="Editar", class="btn btn-info")
+                            span(class="glyphicon glyphicon-pencil")
+                          &nbsp
+                          a(href="/clientes/show/#{valor._id}", title="Editar", class="btn btn-primary")
+                            span(class="glyphicon glyphicon-search")
