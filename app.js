@@ -1,8 +1,3 @@
-
-/**
- * Module dependencies.
- */
-
 var express = require("express");
 var load = require("express-load");
 var mongoose = require("mongoose");
@@ -20,14 +15,14 @@ var cookie = require("cookie-parser");
 
 var app = express();
 
-mongoose.connect("mongodb://localhost/waibtec", function (err) {
+mongoose.connect("mongodb://localhost:27000/nodejsestudo", function (err) {
     if (err) {
         console.log("Erro ao conectar no mongodb: " + err);
     }
 });
 
 // all environments
-app.set("views", __dirname + "/views"); //alterado
+app.set("views", __dirname + "/views"); 
 app.set("view engine", "jade");
 
 app.use(favicon(__dirname + "/public/favicon.ico"));
@@ -45,7 +40,7 @@ app.use(session({
 }));
 app.use(flash());
 
-app.use(express.static(__dirname + "/public")); //alterado
+app.use(express.static(__dirname + "/public"));
 
 // development only
 if ("development" === app.get("env")) {
@@ -54,7 +49,6 @@ if ("development" === app.get("env")) {
 
 load("models").then("controllers").then("routes").into(app);
 
-//alterado
 app.listen(3000, function () {
     console.log("Servidor rodando na porta 3000...");
 });

@@ -1,0 +1,32 @@
+﻿extends ../layout
+
+block content
+    h1 Cadastro de Usuário
+    hr
+    br
+    form(method="POST", action="/clientes", role="form")
+      div(class="form-group")
+        label Nome:
+        input(type="text", name="nome", class="form-control")
+      div(class="form-group")
+        label Sobrenome:
+        input(type="text", name="sobrenome", class="form-control")
+      div(class="form-group")
+        label Data de Nascimento:
+        input(type="date", name="dataNascimento", class="form-control")
+      div(class="form-group")
+        label Data de Cadastro:
+        input(type="date", name="dataCadastro", class="form-control")
+      div(class="form-group")
+        label Endereço:
+        input(type="text", name="endereco", class="form-control")
+      div(class="form-group")
+        label Cidade:
+        input(type="text", name="cidade", class="form-control")
+      div(class="form-group")
+        label Estado:
+        input(type="text", name="estado", class="form-control")
+      input(type="submit", value="Cadastrar", class="btn btn-success")
+    br
+    br
+    a(href="/clientes" title="Voltar") Voltar
