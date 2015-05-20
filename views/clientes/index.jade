@@ -7,6 +7,10 @@ block content
         a(href="/clientes/create" title="Novo Cliente", class="btn btn-success") Novo
         br
         br
+        if messages.info
+          div(class="alert alert-info")
+            p= messages.info
+        br
         table(class="table")
             thead
                 tr

@@ -1,7 +1,7 @@
 ﻿extends ../layout
 
 block content
-    h1 Alteração de Usuário
+    h1 Alteração de Cliente
     hr
     br
     form(method="POST", action="/clientes/edit/#{value._id}", role="form")
@@ -14,10 +14,12 @@ block content
         input(type="text", name="sobrenome", class="form-control",value="#{value.sobrenome}")
       div(class="form-group")
         label Data de Nascimento:
-        input(type="date", name="dataNascimento", class="form-control", value="#{value.dataNascimento}")
+        input(type="date", name="dataNascimento", class="form-control", 
+              value="#{moment(value.dataNascimento).format('DD/MM/YYYY')}")
       div(class="form-group")
         label Data de Cadastro:
-        input(type="date", name="dataCadastro", class="form-control", value="#{value.dataCadastro}")
+        input(type="date", name="dataCadastro", class="form-control", 
+              value="#{moment(value.dataCadastro).format('DD/MM/YYYY')}")
       div(class="form-group")
         label Endereço:
         input(type="text", name="endereco", class="form-control", value="#{value.endereco}")

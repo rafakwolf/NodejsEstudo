@@ -34,7 +34,7 @@ module.exports = function (app) {
                 if (err) {
                     console.log(err);
                 } else {
-                    res.render("clientes/edit", { value: data });
+                    res.render("clientes/edit", { value: data, moment: moment });
                 }
             });
         },
