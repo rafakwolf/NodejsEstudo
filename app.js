@@ -1,3 +1,5 @@
+/* global __dirname */
+
 var express = require("express");
 var load = require("express-load");
 var mongoose = require("mongoose");

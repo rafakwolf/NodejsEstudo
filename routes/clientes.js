@@ -8,4 +8,4 @@ module.exports = function(app){
 	app.put("/clientes/edit/:id", clientes.update);
 	app.get("/clientes/show/:id", clientes.show);
 	app.delete("/clientes/delete/:id", clientes.remove);
-}
+};
