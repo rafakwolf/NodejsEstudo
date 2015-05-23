@@ -74,7 +74,7 @@ module.exports = function (app) {
                 if (err) {
                     console.log(err);
                 } else {
-                    req.flash("info", "Cliente excluído com sucesso!");
+                    req.flash("info", "Cliente excluído com sucesso.");
                     res.redirect("/clientes");
                 }
             });

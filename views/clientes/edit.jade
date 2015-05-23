@@ -11,15 +11,13 @@ block content
         input(type="text", name="nome", class="form-control", value="#{value.nome}")
       div(class="form-group")
         label Sobrenome:
-        input(type="text", name="sobrenome", class="form-control",value="#{value.sobrenome}")
+        input(type="text", name="sobrenome", class="form-control", value="#{value.sobrenome}")
       div(class="form-group")
         label Data de Nascimento:
-        input(type="date", name="dataNascimento", class="form-control", 
-              value="#{moment(value.dataNascimento).format('DD/MM/YYYY')}")
+        input(type="date", name="dataNascimento", class="form-control", value="#{value.dataNascimento}")
       div(class="form-group")
         label Data de Cadastro:
-        input(type="date", name="dataCadastro", class="form-control", 
-              value="#{moment(value.dataCadastro).format('DD/MM/YYYY')}")
+        input(type="date", name="dataCadastro", class="form-control", value="#{value.dataCadastro}")
       div(class="form-group")
         label Endereço:
         input(type="text", name="endereco", class="form-control", value="#{value.endereco}")

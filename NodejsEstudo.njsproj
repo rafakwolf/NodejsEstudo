@@ -30,6 +30,7 @@
     <Compile Include="routes\home.js" />
     <Compile Include="routes\clientes.js" />
     <Compile Include="routes\usuarios.js" />
+    <Content Include="views\clientes\edit.jade" />
     <Content Include="views\clientes\index.jade" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
