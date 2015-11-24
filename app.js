@@ -17,7 +17,7 @@ var cookie = require("cookie-parser");
 
 var app = express();
 
-mongoose.connect("mongodb://localhost:27000/nodejsestudo", function (err) {
+mongoose.connect("mongodb://localhost:27017/nodejsestudo", function (err) {
     if (err) {
         console.log("Erro ao conectar no mongodb: " + err);
     }
